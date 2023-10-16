@@ -65,3 +65,25 @@ app.set('views', path.join(__dirname, 'resources/views'))
 	views/news.hbs
 
 	views/partials/header.hbs & footer.hbs
+
+
+# Xử lý static file
+Lưu file ảnh (src/public/img)
+
+> app.use(express.static(path.join(__dirname, 'public')));
+
+# Cài node-sass
+
+> npm install node-sass --save-dev
+
+# Config folder, file
+src/public/css
+src/resources/scss/app.scss
+
+package.json
+=> "script":{
+	"watch": "node-sass src/resources/scss/app.scss src/public/css/app.css"
+}
+`
+dasdsa
+`
