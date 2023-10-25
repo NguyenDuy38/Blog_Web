@@ -67,23 +67,41 @@ app.set('views', path.join(__dirname, 'resources/views'))
 	views/partials/header.hbs & footer.hbs
 
 
-# Xử lý static file
+
+## Xử lý static file
 Lưu file ảnh (src/public/img)
 
+- Thêm vào file index.js
 > app.use(express.static(path.join(__dirname, 'public')));
 
 # Cài node-sass
 
 > npm install node-sass --save-dev
 
-# Config folder, file
+## Config folder, file
 src/public/css
 src/resources/scss/app.scss
 
 package.json
 => "script":{
-	"watch": "node-sass src/resources/scss/app.scss src/public/css/app.css"
+	"watch": "node-sass --watch src/resources/scss/app.scss -o src/public/css/app.css"
 }
-`
-dasdsa
-`
+
+run: npm run watch
+
+## link CSS
+link .... href = "/css/app.css"
+
+- Tạo file _variable.scs
+$red-color: red;
+Bên file app.css phải import _variable.scss
+>
+- Tạo file nodemon.json
+{
+	"ext": "js json scss hbs"
+}
+
+## Dùng bootstrap 4
+
+
+
